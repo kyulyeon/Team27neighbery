@@ -28,6 +28,7 @@ var uiConfig = {
       document.getElementById('loader').style.display = 'none';
     }
   },
+  
   // Will use popup for IDP Providers sign-in flow instead of the default, redirect.
   signInFlow: 'popup',
   signInSuccessUrl: 'user_home_page.html',
