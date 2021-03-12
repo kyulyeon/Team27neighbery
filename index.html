@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>My BCIT Project</title>
+    <title>Neighvery</title>
     <meta name="comp1800 boilerplate code" content="my bcit project">
     <meta name="author" content="BCIT">
 
@@ -26,56 +26,89 @@
     <!-------------------------------------->
     <!-- Header Navigation Bar -->
     
-        <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Dropdown
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                      </ul>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                    </li>
-                  </ul>
-                  <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                  </form>
-                </div>
-              </div>
-        </nav>
+    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Neighvery</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Order Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Restaurants</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+               Profile
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Past Orders</a></li>
+                <li><a class="dropdown-item" href="#">Billing Information</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Membership Information</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Restaurant" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
      
     
 
-    <div class="container">
-        <h1 class="display-4"><br>Hello, UserName!</h1>
-        <p>What are we feeling like today?</p>
+    <div class="container" style ="text-align: center;">
+        <h1 class="display-4" ><br>Your Local Restaurant, delivered to your door
+        <p style ="font-size: 0.5em;"><br>Please <a href="login.html" style = "text-decoration: underline;">Sign In/Sign Up</a><p>
+        <p style ="font-size: 0.8em;">What are we feeling like today?</p>
     </div>
 
-
+    <div class = "container">
+      <div class="card-group">
+        <div class="card">
+          <img src="images/food.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Restaurant 1</h5>
+            <p class="card-text">Vancouver BC, Delivery Price: $1.99 <br>Reviews: 5star <a href="">Click here to read reviews</a><br>Popular Menus: menu1, menu2, menu3</p>
+            <button type="button" class="btn btn-primary btn-sm" style="float: right;">Order Now</button>
+            
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/food2.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Restaurant 2</h5>
+            <p class="card-text">Vancouver BC, Delivery Price: $1.99 <br>Reviews: 5star <a href="">Click here to read reviews</a><br>Popular Menus: menu1, menu2, menu3</p>
+            <button type="button" class="btn btn-primary btn-sm" style="float: right;">Order Now</button>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/food3.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Restaurant 3</h5>
+            <p class="card-text">Vancouver BC, Delivery Price: $1.99 <br>Reviews: 5star <a href="">Click here to read reviews</a><br>Popular Menus: menu1, menu2, menu3</p>
+            <button type="button" class="btn btn-primary btn-sm" style="float: right;">Order Now</button>
+          </div>
+        </div>
+      </div>
+      </div>
     
 
-    <nav class="navbar fixed-bottom navbar-light" style="background-color: #e3f2fd;">
+      <nav class="navbar fixed-bottom navbar-light" style="background-color: #e3f2fd;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Fixed bottom</a>
+          <a class="navbar-brand" href="#">Neighvery</a>
         </div>
       </nav>
       
