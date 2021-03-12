@@ -1,0 +1,27 @@
+.container1{
+    display: grid;
+    width: 470px;
+    height: 800px;
+    grid-template-columns: 20% 20% 20% 20% 20% 20%;
+    grid-template-rows: 6% 20% 5% 10%;
+    grid-gap: 1%; 
+    grid-template-areas:
+      "tl tl tm tm tr tr tr"
+      "tl tl tm tm tr tr tr"
+      "tl tl tm tm tr tr tr";
+  }
+  .top{
+  grid-area: top;    
+  }
+  .tl{
+  grid-area: tl;    
+  }
+  .tm{
+    grid-area: tm;    
+    }
+    .tr{
+        grid-area: tr;    
+        }
+    .m{
+     margin-top: 10%;   
+    }
