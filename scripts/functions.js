@@ -66,3 +66,35 @@ function reviewsQuery() {
 }
 
 reviewsQuery();
+
+function writeResturants() {
+    var citiesRef = db.collection("resturants");
+    resturantsRef.add({
+        code: "CoffeeBun",
+        name: "Coffee Bun",
+    });
+    citiesRef.add({
+        code: "MB",
+        name: "Mumbai",
+        hemisphere: "south",
+        picture: "mumbai.jpg",
+        population: 18410000
+    });
+    citiesRef.add({
+        code: "SEL",
+        name: "Seoul",
+       
+       
+    });
+    citiesRef.add({
+        code: "CAPE",
+        name: "Cape Town",
+       
+    });
+    citiesRef.add({
+        code: "BJ",
+        name: "Beijing",
+      
+    });
+}
+//writeResturants();
