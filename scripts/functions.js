@@ -73,7 +73,6 @@ function showReviews() {
 }
 showReviews();
 
-reviewsQuery();
 
 function writeResturants() {
     var resturantRef = db.collection("restaurants");
