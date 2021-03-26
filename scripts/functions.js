@@ -46,7 +46,7 @@ function reviews() {
     });
     
 }
-reviews();
+// reviews();
 
 function reviewsQuery() {
     db.collection("reviews")
