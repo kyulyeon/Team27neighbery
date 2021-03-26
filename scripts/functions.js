@@ -21,29 +21,29 @@ loginSuccess();
 
 function reviews() {
     var reviewsRef = db.collection("reviews");
-    reviewsRef.add({
-        name: "userName1",
-        review: "userName1 review goes here",
-        date: "2021-03-01"
-    });
+    // reviewsRef.add({
+    //     name: "userName1",
+    //     review: "userName1 review goes here",
+    //     date: "2021-03-01"
+    // });
 
-    reviewsRef.add({
-        name: "userName2",
-        review: "userName2 review goes here",
-        date: "2021-02-28"
-    });
+    // reviewsRef.add({
+    //     name: "userName2",
+    //     review: "userName2 review goes here",
+    //     date: "2021-02-28"
+    // });
 
-    reviewsRef.add({
-        name: "userName3",
-        review: "userName3 review goes here",
-        date: "2021-02-01"
-    });
+    // reviewsRef.add({
+    //     name: "userName3",
+    //     review: "userName3 review goes here",
+    //     date: "2021-02-01"
+    // });
 
-    reviewsRef.add({
-        name: "userName4",
-        review: "userName4 review goes here",
-        date: "2021-01-25"
-    });
+    // reviewsRef.add({
+    //     name: "userName4",
+    //     review: "userName4 review goes here",
+    //     date: "2021-01-25"
+    // });
     
 }
 // reviews();
