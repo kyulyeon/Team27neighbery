@@ -48,30 +48,22 @@ function reviews() {
 }
 // reviews();
 
-function showReviews() {
+function reviewsQuery() {
     db.collection("reviews")
     .orderBy("date")
     .get()
     .then(function (snap) {
-            snap.forEach(function(doc) {
-                var n = doc.data().name; //username
-                var r = doc.data().review; //review
-                var d = doc.data().date; //date
-
-                var codestring = '<div class="customer-reviews">' +
-                '<p class="reviewtext">' + r + '</p>'
-                + '<div class="whoposted">' 
-                + '<div class="name">' + n + '</div>'
-                + '<div class="timeposted">' + d + '</div>'
-                + '</div>'
-                + '</div>';
-
-                //append with jquery to DOM
-                $("#reviews-goes-here").append(codestring);
-            })
+        snap.forEach(function (doc) {
+            var n = doc.data().name;
+            var r = doc.data().review;
+            var d = doc.data().date;
+            console.log(n);
+            var newdom = "<p> " + n + "<br>" + r + "<br>" + d + "</p>";
+            $("#reviews-goes-here").append(newdom);
+            //document.getElementById("cities-go-here").innerHTML = newdom;
         })
+    })
 }
-showReviews();
 
 reviewsQuery();
 
@@ -119,3 +111,27 @@ function resturantsQuery(){
     })
 }
 resturantsQuery();
+
+function ShowCollection(){
+    db.collection("restaurants")
+		.get()    //get whole collection
+    .then(function(snap){
+        snap.forEach(function(doc){          //cycle thru each doc 
+            // do something with each document
+            var pic = doc.data().picture;   //key "picture"
+            var title = doc.data().name;    //key "name"
+            
+            // construct the string for card
+            var codestring = '<div>'+
+            '<img src="images/' + pic + '" class="card-img-top">'+
+            '<div class="card-body">'+
+            '<h5 class="card-title">' + title + '</h5>'+
+            '<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>'+
+            '<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>'+
+            '</div>';
+            // append with jquery to DOM
+            $("#cards-go-here").append(codestring);
+        })
+    })
+}
+showCollection();
