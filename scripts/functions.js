@@ -68,33 +68,46 @@ function reviewsQuery() {
 reviewsQuery();
 
 function writeResturants() {
-    var citiesRef = db.collection("resturants");
-    resturantsRef.add({
+    var resturantRef = db.collection("restaurants");
+    resturantRef.add({
         code: "CoffeeBun",
         name: "Coffee Bun",
     });
-    citiesRef.add({
-        code: "MB",
-        name: "Mumbai",
-        hemisphere: "south",
-        picture: "mumbai.jpg",
-        population: 18410000
+    resturantRef.add({
+        code: "TCG",
+        name: "The Coquitlam Grill",
     });
-    citiesRef.add({
-        code: "SEL",
-        name: "Seoul",
+    resturantRef.add({
+        code: "Cor",
+        name: "Cora",
        
        
     });
-    citiesRef.add({
-        code: "CAPE",
-        name: "Cape Town",
+    resturantRef.add({
+        code: "Nag",
+        name: "Nagano Japanese Restaurant",
        
     });
-    citiesRef.add({
-        code: "BJ",
-        name: "Beijing",
+    resturantRef.add({
+        code: "Xpress",
+        name: "Xpress Donair House",
       
     });
 }
-//writeResturants();
+//writeRestaurants();
+
+function resturantsQuery(){
+    db.collection("restaurants")
+    .get()
+    .then(function(snap){
+        snap.forEach(function(doc){
+            var n = doc.data().name;
+            
+            console.log(n);
+            var newdom = "<p> " + n + "</p>";
+            $("#resturants-goes-here").append(newdom);
+            //document.getElementById("cities-go-here").innerHTML = newdom;
+        })
+    })
+}
+resturantsQuery();
