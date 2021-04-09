@@ -77,8 +77,8 @@ showReviews();
 function writeResturants() {
     var resturantRef = db.collection("restaurants");
     resturantRef.add({
-        code: "CoffeeBun",
-        name: "Coffee Bun",
+        code: "MUMU",
+        name: "Mumu Kitchen",
     });
     resturantRef.add({
         code: "TCG",
@@ -141,3 +141,23 @@ function showCollection(){
     })
 }
 showCollection();
+
+
+//SEARCH BAR
+function getRestaurants(){
+    document.getElementById("submit").addEventListener('click', function () {
+        var rest = document.getElementById("restaurants").value;
+        console.log(rest);
+        		//read cities collection from firestore, with query
+                db.collection("restaurants")
+                .where("name", "==", res)
+                .get()
+                .then(function (snap) {
+                    snap.forEach(function(doc) {
+                        console.log(doc.data());
+                        //do something with the data
+                    })
+                })
+    })
+}
+getRestaurants();
