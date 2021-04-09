@@ -3,20 +3,20 @@ function writeMenus() {
 }
 // writeRestaurants();
 
-function menusQuery(){
-    db.collection("menus")
-    .get()
-    .then(function(snap){
-        snap.forEach(function(doc){
-            var n = doc.data().name;
+// function menusQuery(){
+//     db.collection("menus")
+//     .get()
+//     .then(function(snap){
+//         snap.forEach(function(doc){
+//             var n = doc.data().name;
             
-            console.log(n);
-            var newdom = "<p> " + n + "</p>";
-            $("#menus-goes-here").append(newdom);
-        })
-    })
-}
-menusQuery();
+//             console.log(n);
+//             var newdom = "<p> " + n + "</p>";
+//             $("#menus-goes-here").append(newdom);
+//         })
+//     })
+// }
+// menusQuery();
 
 function showMenuCollection(){
     db.collection("menu")
@@ -35,7 +35,7 @@ function showMenuCollection(){
             '<h5 class="card-title">' + item + '</h5>' +
             '<p>' + descrip + '</p>' +
             '<p> price: ' + price + '</p>' + '</div>'
-            $("#cards-go-here").append(codestring);
+            $("#menus-goes-here").append(codestring);
         })
     })
 }

@@ -35,4 +35,23 @@ $(function () {
     $("#rateYo").rateYo({
       precision: 2,
     });
-  });
+});
+
+
+  function getReviews() {
+      document.getElementById("finish").addEventListener('click', function() {
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            var name = document.getElementById("userName").value;
+            var review = document.getElementById("userReview").value;
+
+            db.collection("reviews")
+            .add({
+                "name": name,
+                "review": review,
+            })
+      })
+
+    })
+}
+getReviews();
