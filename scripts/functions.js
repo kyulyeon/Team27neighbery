@@ -164,7 +164,7 @@ function getRestaurants(){
 getRestaurants();
 
 function writeMenus() {
-    var resturantRef = db.collection("menus");
+    var resturantRef = db.collection("menu");
     // resturantRef.add({
     //     code: "",
     //     description: "",
