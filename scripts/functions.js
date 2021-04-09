@@ -118,3 +118,11 @@ function resturantsQuery(){
     })
 }
 resturantsQuery();
+
+
+$(function () {
+ 
+    $("#rateYo").rateYo({
+      precision: 2,
+    });
+  });

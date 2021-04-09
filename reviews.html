@@ -10,9 +10,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="styles/my_bootstrap.css" rel="stylesheet">
     <link href="styles/neighvery.css" rel="stylesheet">
+   
 
 
   <!-- Optional styles and scripts of your own -->
@@ -181,7 +183,10 @@
                 <br>
                 Last name:<br>
                 <input type="text" name="lastname" value="">
-                <br><br>
+                <br>
+                <br> 
+                <div id="rateYo"></div>
+                
                 Comment:<br>
                 <textarea rows="4" cols="50" name="comment"></textarea>
                 <br><br>
@@ -224,6 +229,7 @@
   </div>
   </div>
 
+
   <div id="reviews-goes-here"></div>
 
   </div> <!-- /container -->
@@ -252,8 +258,9 @@
   <!--------------------------------------------------------------------->
   <!-- JS files: Your own JavaScript functions included here    -->
   <!--------------------------------------------------------------------->
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
   <script src="scripts/functions.js"></script>
+
 
 
 </body>
