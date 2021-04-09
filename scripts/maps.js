@@ -21,15 +21,15 @@ function setupMap(center) {
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
         center: center,
-        zoom: 15
+        zoom: 16
     })
 
-    const nav = new mapboxgl.NavigationControl()
+const nav = new mapboxgl.NavigationControl()
     map.addControl(nav)
 
-    var directions = new MapboxDirections({
-        accessToken: mapboxgl.accessToken
-    })
+    // var directions = new MapboxDirections({
+    //     accessToken: mapboxgl.accessToken
+    // })
 
-    map.addControl(directions, "top-left")
+    // map.addControl(directions, "top-left")
 }
