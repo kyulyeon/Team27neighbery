@@ -1,24 +1,24 @@
 
 function writeResturants() {
-    var resturantRef = db.collection("restaurants");
-    resturantRef.add({
-        code: "MUMU",
-        name: "Mumu Kitchen",
-    });
-    resturantRef.add({
-        code: "TCG",
-        name: "The Coquitlam Grill",
-    });
-    resturantRef.add({
-        code: "Xpress",
-        name: "Xpress Donair House",
+    // var resturantRef = db.collection("restaurants");
+    // resturantRef.add({
+    //     code: "MUMU",
+    //     name: "Mumu Kitchen",
+    // });
+    // resturantRef.add({
+    //     code: "TCG",
+    //     name: "The Coquitlam Grill",
+    // });
+    // resturantRef.add({
+    //     code: "Xpress",
+    //     name: "Xpress Donair House",
       
-    });
-    resturantRef.add({
-        code: "COR",
-        name: "Cora",
+    // });
+    // resturantRef.add({
+    //     code: "COR",
+    //     name: "Cora",
       
-    });
+    // });
 }
 // writeRestaurants();
 
@@ -32,7 +32,6 @@ function resturantsQuery(){
             console.log(n);
             var newdom = "<p> " + n + "</p>";
             $("#resturants-goes-here").append(newdom);
-            //document.getElementById("cities-go-here").innerHTML = newdom;
         })
     })
 }
