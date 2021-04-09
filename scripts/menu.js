@@ -39,4 +39,4 @@ function showMenuCollection(){
         })
     })
 }
-showCollection();
+showMenuCollection();
