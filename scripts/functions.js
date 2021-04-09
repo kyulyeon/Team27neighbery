@@ -85,23 +85,17 @@ function writeResturants() {
         name: "The Coquitlam Grill",
     });
     resturantRef.add({
-        code: "Cor",
-        name: "Cora",
-       
-       
-    });
-    resturantRef.add({
-        code: "Nag",
-        name: "Nagano Japanese Restaurant",
-       
-    });
-    resturantRef.add({
         code: "Xpress",
         name: "Xpress Donair House",
       
     });
+    resturantRef.add({
+        code: "COR",
+        name: "Cora",
+      
+    });
 }
-//writeRestaurants();
+writeRestaurants();
 
 function resturantsQuery(){
     db.collection("restaurants")
