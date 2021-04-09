@@ -34,7 +34,10 @@ function showMenuCollection(){
           '<div class="card-body">' +
             '<h5 class="card-title">' + item + '</h5>' +
             '<p>' + descrip + '</p>' +
-            '<p> price: ' + price + '</p>' + '</div>'
+            '<p> price: ' + price + '</p>' + '</div>' +
+            '<div class="form-check>'
+            + '<input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">'
+            + '<label class="form-check-label" for="flexCheckIndeterminate">Add to cart</label></div>'
             $("#menus-goes-here").append(codestring);
         })
     })
