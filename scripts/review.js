@@ -44,11 +44,12 @@ $(function () {
 
             var name = document.getElementById("userName").value;
             var review = document.getElementById("userReview").value;
-
+            var date = document.getElementById("date").value;
             db.collection("reviews")
             .add({
                 "name": name,
                 "review": review,
+                "date": date,
             })
       })
 
