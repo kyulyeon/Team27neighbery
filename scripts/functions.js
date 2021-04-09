@@ -143,6 +143,13 @@ function showCollection(){
 showCollection();
 
 
+$(function () {
+ 
+    $("#rateYo").rateYo({
+      precision: 2,
+    });
+  });
+
 //SEARCH BAR
 function getRestaurants(){
     document.getElementById("submit").addEventListener('click', function () {
@@ -163,9 +170,3 @@ function getRestaurants(){
 getRestaurants();
 
 
-$(function () {
- 
-    $("#rateYo").rateYo({
-      precision: 2,
-    });
-  });
