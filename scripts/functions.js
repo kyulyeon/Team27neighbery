@@ -95,7 +95,7 @@ function writeResturants() {
       
     });
 }
-writeRestaurants();
+// writeRestaurants();
 
 function resturantsQuery(){
     db.collection("restaurants")
