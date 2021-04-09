@@ -161,3 +161,11 @@ function getRestaurants(){
     })
 }
 getRestaurants();
+
+
+$(function () {
+ 
+    $("#rateYo").rateYo({
+      precision: 2,
+    });
+  });
