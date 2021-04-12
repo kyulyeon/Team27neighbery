@@ -59,3 +59,11 @@ $(function () {
     })
 }
 getReviews();
+
+//reload page after button click function
+
+$(function() {
+    $("#btReload").click(function (){
+        location.reload(true);
+    });
+});
