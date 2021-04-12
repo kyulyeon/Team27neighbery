@@ -36,7 +36,7 @@ function showMenuCollection() {
                     '<p>' + descrip + '</p>' +
                     '<p> price: ' + price + '</p>' + '</div>' +
                     '<div class="form-check">' +
-                    '<input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">' +
+                    '<input class="form-check-input" type="button" value="" id="flexCheckIndeterminate">' +
                     '<label class="form-check-label" for="flexCheckIndeterminate">' +
                     'Add to Cart' +
                     '</label>' +
