@@ -23,13 +23,12 @@ function showMenuCollection() {
                     // '<input type="hidden" id="menu" value="Ban-Ban Chicken">' 
                     // + '<input type="hidden" id="aboutmenu" value="Half original and half sweet-sour. Boneless. *ALLERGY ALERT: All chicken menu contains PEANUT POWDER">' 
                     // + '<input type="hidden" id="price" value="$30">' +
-                    '<input type="button" value="Add to Cart" id ="addtocart">';
+                    '<input type="button" value="Add to Cart" id =' + doc.id + '>';
                 $("#menus-goes-here").append(codestring);
             })
         })
 }
 showMenuCollection();
-
 
 
 
