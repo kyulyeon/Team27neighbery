@@ -176,15 +176,26 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form action="" target="_blank">
+              <!-- <form action="" target="_blank" method="post"> -->
+                <form action="" target="_blank" method="post">
                 <br>
                 user name:<br>
-                <input type="text" name="firstname" value="" id="userName" >
+                <input type="text" name="firstname" value="" id="userName">
                 <br>
                 Date:<br>
-                <input type="text" name="date" value="" id="date" required>
+                <input type="text" name="date" value="" id="date">
                 <br>
                 <br> 
+<<<<<<< HEAD
+                <div id="rateYo"></div>
+                
+<<<<<<< HEAD
+                Review:<br>
+                <textarea rows="4" cols="50" name="comment" id="userReview" placeholder="required"></textarea>
+=======
+                Comment:<br>
+                <textarea rows="4" cols="50" name="comment" id="userReview" placeholder="maggie"></textarea>
+=======
                 <div class="rate">
 
                   <input type="radio" id="star5" name="rate" value="5" class="star"/>
@@ -204,13 +215,15 @@
                 
                 Review:<br>
                 <textarea rows="4" cols="50" name="comment" id="userReview" placeholder="required"></textarea>
+>>>>>>> 4630ffbc52ad50dfe9a9a934144442d81c9a5101
+>>>>>>> 6e444d2ccbe8e25a560f2beb4dad94c9056ea16d
                 <br><br>
                 <input type="button" value="Submit" id="finish" data-bs-dismiss="modal">
-                </form>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-             
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
@@ -275,7 +288,6 @@
   <!--------------------------------------------------------------------->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
   <script src="scripts/review.js"></script>
-  <script src="scripts/cart.js"></script>
 
 
 

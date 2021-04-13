@@ -3,21 +3,6 @@ function writeMenus() {
 }
 // writeRestaurants();
 
-// function menusQuery(){
-//     db.collection("menus")
-//     .get()
-//     .then(function(snap){
-//         snap.forEach(function(doc){
-//             var n = doc.data().name;
-
-//             console.log(n);
-//             var newdom = "<p> " + n + "</p>";
-//             $("#menus-goes-here").append(newdom);
-//         })
-//     })
-// }
-// menusQuery();
-
 function showMenuCollection() {
     db.collection("menu")
         .get()    //get whole collection
@@ -30,23 +15,38 @@ function showMenuCollection() {
                 var price = doc.data().price;
                 // construct the string for card
                 var codestring = '<div class="card">' +
-                    '<img src="images/' + pic + '"class="card-img-top" alt="...">' +
+                    '<img src="images/' + pic + '"class="card-img-top" alt="..." style="width:400px;height:auto;margin-left:auto;margin-right:auto;">' +
                     '<div class="card-body">' +
-                    " <h5  id='userName' class='card-title'>" + item + " </h5> " +
+                    '<h5 class="card-title" id="menuName">' + item + '</h5>' +
                     '<p>' + descrip + '</p>' +
-                    '<p id = "p"> price: ' + price + '</p>' + '</div>' +
-                    '<div class="form-check">' +
-                    '<input class="form-check-input" type="button" value=" add to cart" id="flexCheckIndeterminate">' +
-                    '<label class="form-check-label" for="flexCheckIndeterminate">' +
-                    'Add to Cart' +
-                    '</label>' +
-                    '</div>';
+                    '<p id="price"> price: ' + price + '</p>' + '</div>' +
+                    // '<input type="hidden" id="menu" value="Ban-Ban Chicken">' 
+                    // + '<input type="hidden" id="aboutmenu" value="Half original and half sweet-sour. Boneless. *ALLERGY ALERT: All chicken menu contains PEANUT POWDER">' 
+                    // + '<input type="hidden" id="price" value="$30">' +
+                    '<input type="button" value="Add to Cart" id ="addtocart">';
                 $("#menus-goes-here").append(codestring);
-          
-            
             })
         })
 }
 showMenuCollection();
+
+function addCartListener() {
+    document.getElementById("addtocart").addEventListener('click', function() {
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            var menuName = document.getElementById("menuName");
+            var price = document.getElementById("price")
+
+
+            db.collection("cart")
+            .add({
+                "name": menuName,
+                "price" : price
+            })
+        })
+    })
+}
+addCartListener();
+
 
 
