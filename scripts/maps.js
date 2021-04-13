@@ -13,7 +13,7 @@ function successLocation(position) {
 }
 
 function errorLocation() {
-    setupMap([-2.24, 53.48])
+    setupMap([-123.116226, 49.246292])
 }
 
 function setupMap(center) {
@@ -21,7 +21,7 @@ function setupMap(center) {
         container: "map",
         style: "mapbox://styles/mapbox/streets-v11",
         center: center,
-        zoom: 16
+        zoom: 16.5
     })
 
 const nav = new mapboxgl.NavigationControl()
