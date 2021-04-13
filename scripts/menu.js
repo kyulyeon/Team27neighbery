@@ -27,23 +27,6 @@ function showMenuCollection() {
 }
 showMenuCollection();
 
-function addCartListener() {
-    document.getElementById("addtocart").addEventListener('click', function() {
-        firebase.auth().onAuthStateChanged(function (user) {
-
-            var menuName = document.getElementById("menuName");
-            var price = document.getElementById("price")
-
-
-            db.collection("cart")
-            .add({
-                "name": menuName,
-                "price" : price
-            })
-        })
-    })
-}
-addCartListener();
 
 
 
