@@ -19,35 +19,33 @@ function showReviews() {
                 var n = doc.data().name; //username
                 var r = doc.data().review; //review
                 var d = doc.data().date; //date
-                let x = doc.data().stars;
+                let x = doc.data().star;
               
-              
-                var codestring = '<div class="customer-reviews">' +
-                '<div class="star">' +
-                   '<span class="fa fa-star stars1">' + '</span>'
-                   +
-                    '<span class="fa fa-star stars2">' + '</span>' + '<span class="fa fa-star stars3">'
-                      +
-                      '</span>'
-                      +
-                      '<span class="fa fa-star stars4">'
-                        +
-                        '</span><span class="fa fa-star stars5">' + '</span>'
-                        +'</div>' +
-                '<p class="reviewtext">' + r + '</p>'
-                + '<div class="whoposted">' 
-                + '<div class="name">' + n + '</div>'
-                + '<div class="timeposted">' + d + '</div>'
-                + '</div>'
-                + '</div>';
+            var codestring = '<div class="customer-reviews">' +
+            '<div class="star">' +
+            '<span class="fa fa-star stars1">' + '</span>'
+            +
+                '<span class="fa fa-star stars2">' + '</span>' + '<span class="fa fa-star stars3">'
+                +
+                '</span>'
+                +
+                '<span class="fa fa-star stars4">'
+                    +
+                    '</span><span class="fa fa-star stars5">' + '</span>'
+                    +'</div>' +
+            '<p class="reviewtext">' + r + '</p>'
+            + '<div class="whoposted">' 
+            + '<div class="name">' + n + '</div>'
+            + '<div class="timeposted">' + d + '</div>'
+            + '</div>'
+            + '</div>';
 
-                //append with jquery to DOM
-                $("#reviews-goes-here").append(codestring);
-                for ( var j = 1; j <= x; j++) {
-                  $(".star" + j).css("color", "orange");
-                  console.log(x);
-              }
-             
+            $("#reviews-goes-here").append(codestring);
+           
+            for (j = 1; j <= x; j++) {
+                $(".stars" + j).css("color", "orange");
+            }
+            
 
             })
         })
