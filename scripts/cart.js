@@ -1,4 +1,4 @@
-function  addCartListener(id){
+function  getCart(){
     document.getElementById("finished").addEventListener('click', function () {
       console.log(id + "was clicked")
         firebase.auth().onAuthStateChanged(function (user) {
@@ -26,5 +26,6 @@ function  addCartListener(id){
     })
     
 }
+getCart();
 
 

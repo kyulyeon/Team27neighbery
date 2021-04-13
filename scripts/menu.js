@@ -42,7 +42,7 @@ function showMenuCollection() {
                     '</label>' +
                     '</div>';
                 $("#menus-goes-here").append(codestring);
-            addCartListener(id);
+          
             
             })
         })
