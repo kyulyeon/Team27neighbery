@@ -1,32 +1,20 @@
-// function  getCart(){
-//     document.getElementById("finished").addEventListener('click', function () {
-//       console.log(id + "was clicked")
-//         firebase.auth().onAuthStateChanged(function (user) {
+function addCartListener() {
+    document.getElementById("addtocart").addEventListener('click', function() {
+        firebase.auth().onAuthStateChanged(function (user) {
 
-//             // get various values from the form
-
-
-//                 var name = document.getElementById("userName").value;
-//                 var price = document.getElementById("p").value;
-//                 var flexCheckIndeterminate  = document.getElementById("flexCheckIndeterminate").checked;
+            var menuName = document.getElementById("menuName");
+            var price = document.getElementById("price")
 
 
-
-
-//                 db.collection("cart")
-
-//                     .add({
-//                         "name": name,   //from text field
-//                         "price": price,
-//                         "checked":flexCheckIndeterminate
-//                     })
-
-
-//         })
-//     })
-
-// }
-// getCart();
+            db.collection("cart")
+            .add({
+                "name": menuName,
+                "price" : price
+            })
+        })
+    })
+}
+addCartListener();
 
 function getCart() {
     document.getElementById("addtocart").addEventListener('click', function () {

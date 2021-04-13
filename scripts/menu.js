@@ -3,21 +3,6 @@ function writeMenus() {
 }
 // writeRestaurants();
 
-// function menusQuery(){
-//     db.collection("menus")
-//     .get()
-//     .then(function(snap){
-//         snap.forEach(function(doc){
-//             var n = doc.data().name;
-
-//             console.log(n);
-//             var newdom = "<p> " + n + "</p>";
-//             $("#menus-goes-here").append(newdom);
-//         })
-//     })
-// }
-// menusQuery();
-
 function showMenuCollection() {
     db.collection("menu")
         .get()    //get whole collection
@@ -32,21 +17,33 @@ function showMenuCollection() {
                 var codestring = '<div class="card">' +
                     '<img src="images/' + pic + '"class="card-img-top" alt="...">' +
                     '<div class="card-body">' +
-                    " <h5  id='userName' class='card-title'>" + item + " </h5> " +
-                    '<p id="description">' + descrip + '</p>' +
-                    '<p id = "p"> price: ' + price + '</p>' + '</div>' +
-                    '<div class="form-check">' +
-                    '<input type="checkbox" id="cart">' +
-                    '<label class="form-check-label" for="flexCheckIndeterminate">' +
-                    'Add to Cart' +
-                    '</label>' +
-                    '</div>';
+                    '<h5 class="card-title" id="menuName">' + item + '</h5>' +
+                    '<p>' + descrip + '</p>' +
+                    '<p id="price"> price: ' + price + '</p>' + '</div>' +
+                    '<input type="button" value="Add to Cart" id ="addtocart">';
                 $("#menus-goes-here").append(codestring);
-          
-            
             })
         })
 }
 showMenuCollection();
+
+function addCartListener() {
+    document.getElementById("addtocart").addEventListener('click', function() {
+        firebase.auth().onAuthStateChanged(function (user) {
+
+            var menuName = document.getElementById("menuName");
+            var price = document.getElementById("price")
+
+
+            db.collection("cart")
+            .add({
+                "name": menuName,
+                "price" : price
+            })
+        })
+    })
+}
+addCartListener();
+
 
 
