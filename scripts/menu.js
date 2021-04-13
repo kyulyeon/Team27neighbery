@@ -33,10 +33,10 @@ function showMenuCollection() {
                     '<img src="images/' + pic + '"class="card-img-top" alt="...">' +
                     '<div class="card-body">' +
                     " <h5  id='userName' class='card-title'>" + item + " </h5> " +
-                    '<p>' + descrip + '</p>' +
+                    '<p id="description">' + descrip + '</p>' +
                     '<p id = "p"> price: ' + price + '</p>' + '</div>' +
                     '<div class="form-check">' +
-                    '<input class="form-check-input" type="button" value=" add to cart" id="flexCheckIndeterminate">' +
+                    '<input type="checkbox" id="cart">' +
                     '<label class="form-check-label" for="flexCheckIndeterminate">' +
                     'Add to Cart' +
                     '</label>' +

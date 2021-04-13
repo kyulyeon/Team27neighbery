@@ -176,39 +176,27 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              <form action="" target="_blank">
+              <!-- <form action="" target="_blank" method="post"> -->
+                <form action="" target="_blank" method="post">
                 <br>
                 user name:<br>
-                <input type="text" name="firstname" value="" id="userName" >
+                <input type="text" name="firstname" value="" id="userName">
                 <br>
                 Date:<br>
-                <input type="text" name="date" value="" id="date" required>
+                <input type="text" name="date" value="" id="date">
                 <br>
                 <br> 
-                <div class="rate">
-                  
-                  <input type="radio" id="star5" name="rate" value="false" />
-                  <label for="star5" title="text">5 stars</label>
-                  <input type="radio" id="star4" name="rate" value="false" />
-                  <label for="star4" title="text">4 stars</label>
-                  <input type="radio" id="star3" name="rate" value="false" />
-                  <label for="star3" title="text">3 stars</label>
-                  <input type="radio" id="star2" name="rate" value="false" />
-                  <label for="star2" title="text">2 stars</label>
-                  <input type="radio" id="star1" name="rate" value="false" />
-                  <label for="star1" title="text">1 star</label>
-                </div>
-              
-               <br> <br>
-                Review:<br>
-                <textarea rows="4" cols="50" name="comment" id="userReview" placeholder="required"></textarea>
+                <div id="rateYo"></div>
+                
+                Comment:<br>
+                <textarea rows="4" cols="50" name="comment" id="userReview" placeholder="maggie"></textarea>
                 <br><br>
                 <input type="button" value="Submit" id="finish" data-bs-dismiss="modal">
-                </form>
+              </form>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-             
+              <button type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
@@ -273,7 +261,6 @@
   <!--------------------------------------------------------------------->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
   <script src="scripts/review.js"></script>
-  <script src="scripts/cart.js"></script>
 
 
 
