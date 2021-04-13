@@ -21,6 +21,11 @@ function getCart() {
                 firebase.auth().onAuthStateChanged(function (user) {
                     
                     var name = document.getElementById("cart").value;
+                    // var menu = document.getElementById("menu").value;
+                    // var aboutmenu = document.getElementById("aboutmenu").value;
+                    // var price = document.getElementById("price").value;
+
+                    
                 //     db.collection("menu").get().then(function (snap) {
                 //     snap.forEach(function (doc) {
                 //     var item = doc.data().menu_item;    //key "menu_item"
@@ -31,8 +36,8 @@ function getCart() {
                     db.collection("cart")
                     .add({
                         "name": name,
-                        // "menu": item,
-                        // "description": descrip,
+                        // "menu": menu,
+                        // "descrip": aboutmenu,
                         // "price": price,
                     })
               })
