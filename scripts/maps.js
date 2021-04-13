@@ -24,7 +24,7 @@ function setupMap(center) {
         zoom: 16.5
     })
 
-const nav = new mapboxgl.NavigationControl()
+    const nav = new mapboxgl.NavigationControl()
     map.addControl(nav)
 
     // var directions = new MapboxDirections({
