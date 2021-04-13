@@ -5,6 +5,8 @@ function reviews() {
 }
 // reviews();
 
+const StarsTotal = 5;
+
 function showReviews() {
     db.collection("reviews")
     .orderBy("date")
@@ -30,12 +32,7 @@ function showReviews() {
 }
 showReviews();
 
-$(function () {
- 
-    $("#rateYo").rateYo({
-      precision: 2,
-    });
-});
+
 
 
   function getReviews() {
@@ -45,7 +42,7 @@ $(function () {
             var name = document.getElementById("userName").value;
             var review = document.getElementById("userReview").value;
             var date = document.getElementById("date").value;
-           
+            var star = document.getElementById("").value;
             
            
             db.collection("reviews")
@@ -67,3 +64,4 @@ $(function() {
         location.reload(true);
     });
 });
+
