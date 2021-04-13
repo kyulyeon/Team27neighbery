@@ -5,7 +5,7 @@ function reviews() {
 }
 // reviews();
 
-const StarsTotal = 5;
+
 
 function showReviews() {
     db.collection("reviews")
@@ -18,6 +18,7 @@ function showReviews() {
                 var d = doc.data().date; //date
 
                 var codestring = '<div class="customer-reviews">' +
+                
                 '<p class="reviewtext">' + r + '</p>'
                 + '<div class="whoposted">' 
                 + '<div class="name">' + n + '</div>'
@@ -33,16 +34,14 @@ function showReviews() {
 showReviews();
 
 
-
-
   function getReviews() {
       document.getElementById("finish").addEventListener('click', function() {
         firebase.auth().onAuthStateChanged(function (user) {
-
+             
             var name = document.getElementById("userName").value;
             var review = document.getElementById("userReview").value;
             var date = document.getElementById("date").value;
-            var star = document.getElementById("").value;
+            var star = document.getElementsByClassName("stars").value;
             
            
             db.collection("reviews")
@@ -50,6 +49,7 @@ showReviews();
                 "name": name,
                 "review": review,
                 "date": date,
+                "star": star
             })
       })
 
@@ -65,3 +65,7 @@ $(function() {
     });
 });
 
+function setRating() {
+    let index = $(event.target).index(".star");
+    rating = index + 1;
+}
