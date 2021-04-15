@@ -20,15 +20,56 @@ function showMenuCollection() {
                     '<h5 class="card-title" id="menuName">' + item + '</h5>' +
                     '<p>' + descrip + '</p>' +
                     '<p id="price"> price: ' + price + '</p>' + '</div>' +
-                    // '<input type="hidden" id="menu" value="Ban-Ban Chicken">' 
-                    // + '<input type="hidden" id="aboutmenu" value="Half original and half sweet-sour. Boneless. *ALLERGY ALERT: All chicken menu contains PEANUT POWDER">' 
-                    // + '<input type="hidden" id="price" value="$30">' +
                     '<input type="button" value="Add to Cart" id =' + doc.id + '>';
                 $("#menus-goes-here").append(codestring);
+                addCartListenerById(doc.id);
             })
         })
 }
-showMenuCollection();
+// showMenuCollection();
+
+function addCartListenerById(docid) {
+    document.getElementById(docid).addEventListener("click", function() {
+        console.log("adding " + docid + " to cart");
+        firebase.auth().onAuthStateChanged(function (user) {
+            db.collection("users").doc(user.uid)
+            .set({
+                CartByID: firebase.firestore.FieldValue.arrayUnion(docid)
+            }, {
+                merge: true
+            });
+        })
+    })
+}
+
+function showShoppingCart() {
+    firebase.auth().onAuthStateChanged(function (user) {
+        db.collection("users").doc(user.uid).onSnapshot(function (doc) {
+
+            var list = doc.data().CartByID;
+
+            document.getElementById("cart-items-go-here").innerHTML = "";
+
+            if (list) {
+                list.forEach(function (item) {
+
+                    db.collection("menu").doc(item).onSnapshot(function (doc) {
+                        let name = doc.data().menu_item;
+                        let cost = doc.data().price;
+                        let msg = '<div class="card"> <div class="card-header">' +
+                        'Menu Item </div> <div class="card-body"> <h5 class="card-title">' + name + '</h5>';
+                        msg += '<p class="card-text">' + cost + '</p>'
+                        msg += '<a href="menu_items.html" class="btn btn-primary">' + 'Back to Menu' + '</a>'
+                        console.log(msg);
+                        $("#cart-items-go-here").append(msg);
+                    })
+                })
+            }
+        })
+    })
+}
+
+// showShoppingCart();
 
 
 
