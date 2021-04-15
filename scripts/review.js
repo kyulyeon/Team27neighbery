@@ -39,7 +39,7 @@ function showReviews() {
 
             $("#reviews-goes-here").append(codestring);
            
-            for (j = 1; j <= x; j++) {
+            for (j = 0; j <= x; j++) {
                 $(".stars" + j).css("color", "orange");
             }
             
