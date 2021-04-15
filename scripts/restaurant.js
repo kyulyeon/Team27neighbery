@@ -47,7 +47,7 @@ function showCollection(){
             var title = doc.data().name;    //key "name"
             
             // construct the string for card
-            var codestring = '<div class="card">' +
+            var codestring = '</br>' +'<div class="card" style="width:420px;height:auto;margin-left:auto;margin-right:auto;">' +
           '<img src="images/' + pic + '"class="card-img-top" alt="...">' +
           '<div class="card-body">' +
             '<h5 class="card-title">' + title + '</h5>' +
@@ -59,25 +59,5 @@ function showCollection(){
     })
 }
 showCollection();
-
-
-//SEARCH BAR
-function getRestaurants(){
-    document.getElementById("submit").addEventListener('click', function () {
-        var rest = document.getElementById("restaurants").value;
-        console.log(rest);
-        		//read cities collection from firestore, with query
-                db.collection("restaurants")
-                .where("name", "==", res)
-                .get()
-                .then(function (snap) {
-                    snap.forEach(function(doc) {
-                        console.log(doc.data());
-                        //do something with the data
-                    })
-                })
-    })
-}
-getRestaurants();
 
 

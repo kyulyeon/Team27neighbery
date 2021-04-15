@@ -12,13 +12,11 @@ function reviews() {
 
 function showReviews() {
     db.collection("reviews")
-    .orderBy("date")
     .get()
     .then(function (snap) {
             snap.forEach(function(doc) {
                 var n = doc.data().name; //username
                 var r = doc.data().review; //review
-                var d = doc.data().date; //date
                 let x = doc.data().star;
               
             var codestring = '<div class="customer-reviews">' +
@@ -36,7 +34,6 @@ function showReviews() {
             '<p class="reviewtext">' + r + '</p>'
             + '<div class="whoposted">' 
             + '<div class="name">' + n + '</div>'
-            + '<div class="timeposted">' + d + '</div>'
             + '</div>'
             + '</div>';
 
@@ -75,13 +72,11 @@ var rating = 0;
                   firebase.auth().onAuthStateChanged(function (user) {
                       var name = document.getElementById("userName").value;
                       var review = document.getElementById("userReview").value;
-                      var date = document.getElementById("date").value;
 
                       db.collection("reviews")
                       .add({
                           "name": name,
                           "review": review,
-                          "date": date,
                           "star": rating
                       })
                   })

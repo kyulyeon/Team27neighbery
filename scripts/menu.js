@@ -14,13 +14,13 @@ function showMenuCollection() {
                 var descrip = doc.data().description; // key "description"
                 var price = doc.data().price;
                 // construct the string for card
-                var codestring = '<div class="card">' +
+                var codestring = '<br>' + '<div class="card" style="width:450px;height:auto;margin-left:auto;margin-right:auto;">' +
                     '<img src="images/' + pic + '"class="card-img-top" alt="..." style="width:400px;height:auto;margin-left:auto;margin-right:auto;">' +
                     '<div class="card-body">' +
                     '<h5 class="card-title" id="menuName">' + item + '</h5>' +
                     '<p>' + descrip + '</p>' +
-                    '<p id="price"> price: ' + price + '</p>' + '</div>' +
-                    '<input type="button" value="Add to Cart" id =' + doc.id + '>';
+                    '<p id="price"> price: $' + price + '</p>' + '</div>' +
+                    '<input type="button" value="Add to Cart" id =' + doc.id + ' style="width:120px;height:auto;margin-left:300px;">' + '<br>';
                 $("#menus-goes-here").append(codestring);
                 addCartListenerById(doc.id);
             })
@@ -56,9 +56,8 @@ function showShoppingCart() {
                     db.collection("menu").doc(item).onSnapshot(function (doc) {
                         let name = doc.data().menu_item;
                         let cost = doc.data().price;
-                        let msg = '<div class="card"> <div class="card-header">' +
-                        'Menu Item </div> <div class="card-body"> <h5 class="card-title">' + name + '</h5>';
-                        msg += '<p class="card-text">' + cost + '</p>'
+                        let msg = '<div class="card" >' + '</br>' + '<div class="card-body"> <h5 class="card-title">' + name + '</h5>';
+                        msg += '<p class="card-text">Price: $' + cost + '</p>'
                         msg += '<a href="menu_items.html" class="btn btn-primary">' + 'Back to Menu' + '</a>'
                         console.log(msg);
                         $("#cart-items-go-here").append(msg);

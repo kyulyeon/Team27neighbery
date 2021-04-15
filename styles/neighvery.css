@@ -240,3 +240,7 @@
 .rate > label:hover ~ input:checked ~ label {
     color: #c59b08;
 }
+
+#cart-items-go-here {
+  margin-top: -50px;
+}
