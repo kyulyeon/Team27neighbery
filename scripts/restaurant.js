@@ -52,8 +52,8 @@ function showCollection(){
           '<img src="images/' + pic + '"class="card-img-top" alt="...">' +
           '<div class="card-body">' +
             '<h5 class="card-title">' + title + '</h5>' +
-            '<p class="card-text">Vancouver BC, Delivery Price: $1.99 <br>Reviews: 5star <a href="reviews.html">Click here to read reviews</a><br>Popular Menus: menu1, menu2, menu3</p>' 
-            + '<input type="button" value="Favorite" id =' + doc.id + ' class="btn btn-primary btn-sm" style="float: left;">' + '<br>'
+            '<p class="card-text">Vancouver BC, Delivery Price: $1.99 <br><br><a href="reviews.html">Click here to read reviews</a></p>' 
+            + '<input type="button" value="Favorite" id =' + doc.id + ' class="btn btn-primary btn-sm" style="float: left;margin-top:25px;">' + '<br>'
             + '<a href="menu_items.html"><button type="button" class="btn btn-primary btn-sm" style="float: right;">Order Now</button>' + '</div>' + '</div>' ;
             
 
