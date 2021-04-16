@@ -29,15 +29,15 @@ function showMenuCollection() {
 // showMenuCollection();
 
 function addCartListenerById(docid) {
-    document.getElementById(docid).addEventListener("click", function() {
+    document.getElementById(docid).addEventListener("click", function () {
         console.log("adding " + docid + " to cart");
         firebase.auth().onAuthStateChanged(function (user) {
             db.collection("users").doc(user.uid)
-            .set({
-                CartByID: firebase.firestore.FieldValue.arrayUnion(docid)
-            }, {
-                merge: true
-            });
+                .set({
+                    CartByID: firebase.firestore.FieldValue.arrayUnion(docid)
+                }, {
+                    merge: true
+                });
         })
     })
 }
