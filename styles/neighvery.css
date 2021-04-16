@@ -244,3 +244,21 @@
 #cart-items-go-here {
   margin-top: -50px;
 }
+
+h1 {
+  margin-top: 10px;
+  color: #84d1df;
+  font-style: italic;
+  font-size: 2em;
+
+}
+
+h2 {
+  margin-top: -40px;
+  font-size: 1em;
+}
+
+h3 {
+  font-size: 1em;
+  margin-top:20px;
+}

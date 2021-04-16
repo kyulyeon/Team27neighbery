@@ -38,10 +38,14 @@ function showReviews() {
             + '</div>';
 
             $("#reviews-goes-here").append(codestring);
-           
+            
             for (j = 0; j <= x; j++) {
-                $(".stars" + j).css("color", "orange");
+                $(".stars" + j).css("color", "orange");   
             }
+            $(".stars" + j).css("color", "black");
+            
+           
+            
             
 
             })

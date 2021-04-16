@@ -53,7 +53,7 @@ function showCollection(){
           '<div class="card-body">' +
             '<h5 class="card-title">' + title + '</h5>' +
             '<p class="card-text">Vancouver BC, Delivery Price: $1.99 <br>Reviews: 5star <a href="reviews.html">Click here to read reviews</a><br>Popular Menus: menu1, menu2, menu3</p>' 
-            + '<input type="button" value="fav" id =' + doc.id + ' class="btn btn-primary btn-sm" style="float: left;">' + '<br>'
+            + '<input type="button" value="Favorite" id =' + doc.id + ' class="btn btn-primary btn-sm" style="float: left;">' + '<br>'
             + '<a href="menu_items.html"><button type="button" class="btn btn-primary btn-sm" style="float: right;">Order Now</button>' + '</div>' + '</div>' ;
             
 
